@@ -4,7 +4,8 @@ const addBtn = document.getElementById('addBtn')
 
 addBtn.onclick = function () {
     if(input.value === '') {
-        alert('You must write something!')
+        input.placeholder = 'You must write something!'
+        setTimeout(() => input.placeholder = 'Add your text', 2000)
     } else {
         let li = document.createElement('li')
         li.innerHTML = input.value
